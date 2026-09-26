@@ -1,9 +1,8 @@
-
 # Team Poll System
 
 A serverless polling API built with Azure Functions and Azure Service Bus.
 
-Votes are submitted through an HTTP endpoint, processed asynchronously through a queue, and aggregated into poll results that can be retrieved through a results endpoint.
+Votes are submitted through an HTTP endpoint, processed asynchronously through a queue, and stored as aggregated poll results.
 
 ## Architecture
 
