@@ -1,0 +1,16 @@
+{
+  "name": "team-poll-system",
+  "version": "1.0.0",
+  "description": "Serverless team poll API: HTTP-triggered Azure Functions submit votes through a Service Bus queue; a queue-triggered function aggregates results in Blob Storage.",
+  "main": "src/functions/*.js",
+  "scripts": {
+    "start": "func start"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.5.0",
+    "@azure/storage-blob": "^12.28.0"
+  }
+}
