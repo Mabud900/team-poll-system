@@ -8,12 +8,12 @@ Votes are submitted through an HTTP endpoint, processed asynchronously through a
 
 ```mermaid
 graph TB
-    USER[Team Members] -->|POST /api/votes| SUBMIT[submitVote]
-    SUBMIT --> QUEUE[Service Bus Queue]
-    QUEUE --> PROCESS[processVote]
-    PROCESS --> STORE[(Results Store)]
+    USER["Team Members"] --> SUBMIT["submitVote"]
+    SUBMIT --> QUEUE["Service Bus Queue"]
+    QUEUE --> PROCESS["processVote"]
+    PROCESS --> STORE["Results Store"]
 
-    VIEWER[Users] -->|GET /api/results/{pollId}| RESULTS[getResults]
+    VIEWER["Users"] --> RESULTS["getResults"]
     RESULTS --> STORE
 ```
 
